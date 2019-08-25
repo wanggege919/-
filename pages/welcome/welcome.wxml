@@ -1,0 +1,10 @@
+
+<view class='container'>
+  <image src='/images/avatar/4.png' class='user-avatar'
+  ></image>
+  <text class='welcome'>Hello, 旺旺</text>
+  <view class='button' bind:tap='onTap'>
+    <text>开启小程序之旅</text>
+  </view>
+</view>
+

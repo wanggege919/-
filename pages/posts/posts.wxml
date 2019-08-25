@@ -1,0 +1,19 @@
+<import src="./posts-item/posts-item-template.wxml" />
+<view>
+  <swiper bind:tap="onSwiperTap" indicator-dots='true' autoplay='true'>
+    <swiper-item>
+      <image src='/images/wx.png' data-postId="3"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/vr.png' data-postId="4"></image></swiper-item>
+    <swiper-item>
+      <image src='/images/iqiyi.png' data-postId="5"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for='{{post_content}}' wx:for-item='item' wx:key='{{index}}'>
+    <view bind:tap="onPostTap" data-postId="{{item.postId}}">
+      <template is="postItem" data="{{...item}}" />
+      <!--...item就是把item的属性展开，在模板中直接使用属性即可 -->
+    </view>
+  </block>
+</view>
